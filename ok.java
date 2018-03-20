@@ -4,13 +4,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
-public class wrong_pass extends JFrame {
+public class ok extends JFrame {
 
 	private JPanel contentPane;
 
@@ -21,7 +19,7 @@ public class wrong_pass extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					wrong_pass frame = new wrong_pass();
+					ok frame = new ok();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,27 +31,17 @@ public class wrong_pass extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public wrong_pass() {
+	public ok() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 198, 113);
+		setBounds(100, 100, 176, 125);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		contentPane.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		JLabel lblNewLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(12, 17, 152, 15);
-		contentPane.add(lblNewLabel);
-		
-		JButton btnNewButton = new JButton("\uD655\uC778");
-		btnNewButton.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				dispose();
-			}
-		});
-		btnNewButton.setBounds(49, 42, 69, 23);
-		contentPane.add(btnNewButton);
+		JLabel label = new JLabel("\uC644\uB8CC \uB418\uC5C8\uC2B5\uB2C8\uB2E4.");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		contentPane.add(label);
 	}
 
 }
